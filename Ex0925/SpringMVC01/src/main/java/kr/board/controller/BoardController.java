@@ -24,13 +24,14 @@ public class BoardController {
    
    @RequestMapping("/boardList.do")
    public String boardList(Model model) {
+	   
 	   ArrayList<Board> list = mapper.boardList();
 	   model.addAttribute("list", list);
+	   
 	   return "boardList";
 	   
 	   
-	   
-	   /*
+	   /* 
       // public : 누구나 접근
       // String : Controller가 기능을 수행하고 return이 ViewName은 문자열임
       // 메소드 이름 = View Name과 동일하게 씀
